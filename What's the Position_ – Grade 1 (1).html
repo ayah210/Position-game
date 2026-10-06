@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What's the Position? – Grade 1</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF4D6;--card:#fff;--ink:#1F2A44;--mute:#5b6b8c;--or:#FF8A1F;--orsoft:#FFE2BF;--blue:#1673B8;--pink:#F2547D;--ok:#2FA866;--no:#E5484D;--line:#f3c98c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b2236;--card:#252f4b;--ink:#f4f7ff;--mute:#a9b7d6;--orsoft:#5a3b1c;--line:#7a5430}}
+:root[data-theme="dark"]{--bg:#1b2236;--card:#252f4b;--ink:#f4f7ff;--mute:#a9b7d6;--orsoft:#5a3b1c;--line:#7a5430}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Fredoka","Trebuchet MS",system-ui,sans-serif;line-height:1.4}
+header{background:var(--blue);color:#fff;padding:18px 16px}
+header h1{max-width:720px;margin:0 auto;font-size:clamp(1.8rem,7vw,2.8rem);line-height:1.1}
+main{max-width:720px;margin:0 auto;padding:20px 12px 48px}
+section{background:var(--card);border:4px solid var(--or);border-radius:24px;padding:16px 12px 20px;margin-bottom:20px}
+.tag{display:inline-block;color:#fff;font-weight:700;font-size:1.2rem;padding:4px 22px 4px 14px;margin:-4px 0 12px -8px;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 50%,100% 100%,0 100%)}
+.t1{background:var(--or)}.t2{background:var(--pink)}.t3{background:var(--blue)}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:4px solid var(--blue);outline-offset:2px}
+.ends{display:flex;justify-content:space-between;font-weight:700;font-size:1rem;margin:6px 2px 2px}
+.line{display:grid;gap:4px}
+.cell{background:transparent;border:3px solid transparent;border-radius:14px;padding:4px 0 2px;text-align:center;font:inherit;color:inherit;display:block;width:100%}
+.cell .e{display:block;font-size:clamp(1.5rem,7vw,2.6rem);line-height:1.2}
+.cell .c{display:block;font-size:.85rem;font-weight:700;color:var(--mute);min-height:1.2em}
+.cell.hi{background:var(--orsoft);border-color:var(--or)}
+.cell.ok{background:#cdeedb;border-color:var(--ok)}
+.seg{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.seg button{flex:1;min-width:120px;background:var(--bg);border:3px solid var(--line);border-radius:999px;padding:8px 10px;font-weight:600}
+.seg button[aria-pressed="true"]{background:var(--or);border-color:var(--or);color:#fff}
+.nums{display:grid;grid-template-columns:repeat(10,1fr);gap:4px;margin-bottom:12px}
+.nums button{background:var(--bg);border:3px solid var(--line);border-radius:10px;padding:6px 0;font-weight:700}
+.nums button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.coach{display:flex;align-items:center;gap:10px}
+.coach .hen{font-size:3rem}
+.bubble{flex:1;border:3px solid var(--ink);border-radius:20px;padding:8px 12px;font-size:1.05rem;position:relative;background:var(--card)}
+.big{font-size:1.5rem;font-weight:700;margin:10px 0 6px}
+.say{background:var(--ink);color:var(--card);border:0;border-radius:999px;padding:6px 16px;font-weight:600}
+.q{font-size:1.5rem;font-weight:700;margin:6px 0 4px}
+.info{display:flex;justify-content:space-between;color:var(--mute);margin-bottom:4px}
+.msg{min-height:3em;font-size:1.15rem;font-weight:600;margin:10px 0 6px}
+.acts{display:flex;gap:8px}
+.go{background:var(--ok);color:#fff;border:0;border-radius:999px;padding:10px 26px;font-size:1.15rem;font-weight:700}
+.go[hidden]{display:none}
+.end{text-align:center;font-size:1.2rem}.end .st{font-size:2.6rem}
+html{-webkit-text-size-adjust:100%}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.cell,.nums button,.seg button{user-select:none;-webkit-user-select:none}
+@media (max-width:480px){
+main{padding:12px 8px 32px}
+section{border-width:3px;border-radius:18px;padding:14px 8px 16px}
+.seg button{min-width:100%;padding:12px 10px;font-size:1.05rem}
+.nums{grid-template-columns:repeat(5,1fr);gap:6px}
+.nums button{padding:12px 0;font-size:1.2rem}
+.line{gap:2px}
+.cell{padding:8px 0 4px;border-width:2px;border-radius:10px;min-height:68px}
+.cell .e{font-size:clamp(1.3rem,6.4vw,2rem)}
+.cell .c{font-size:.7rem}
+.acts{flex-direction:column}
+.go{width:100%;padding:14px}
+.coach .hen{font-size:2.4rem}
+.q{font-size:1.3rem}
+.big{font-size:1.3rem}
+}
+</style>
+</head>
+<body>
+<header><h1>What's the Position?</h1></header>
+<main>
+
+<section>
+  <span class="tag t1">Point!</span>
+  <div class="seg" id="kindSeg">
+    <button type="button" data-k="group">4 people from the front</button>
+    <button type="button" data-k="one">The 4th person</button>
+  </div>
+  <div class="seg" id="dirSeg">
+    <button type="button" data-d="front">From the front</button>
+    <button type="button" data-d="back">From the back</button>
+  </div>
+  <div class="nums" id="nums" aria-label="Choose a number"></div>
+  <div class="ends"><span>Front</span><span>Back</span></div>
+  <div id="pLine"></div>
+  <p class="big" id="pText" aria-live="polite"></p>
+  <button class="say" id="pSay" type="button">🔊 Listen</button>
+  <div class="coach" style="margin-top:12px"><span class="hen" aria-hidden="true">🐔</span><div class="bubble" id="pBub"></div></div>
+</section>
+
+<section>
+  <span class="tag t2">Warm Up</span>
+  <div class="info"><span id="qNo"></span><span id="qPts"></span></div>
+  <p>Circle the answer.</p>
+  <p class="q" id="qText"></p>
+  <div class="ends"><span>Front</span><span>Back</span></div>
+  <div id="qLine"></div>
+  <p class="msg" id="qMsg" aria-live="polite"></p>
+  <div class="acts">
+    <button class="go" id="chk" type="button">Check</button>
+    <button class="go" id="nxt" type="button" hidden>Next</button>
+  </div>
+</section>
+
+</main>
+<script>
+var $=function(i){return document.getElementById(i)};
+var KIDS=["👧","🧒","👩","👦","🧑","👨","👧🏽","👦🏽","🧒🏽","👩🏻"];
+var RAB=["🐰","🐰","🐰","🐰","🐰"];
+var WORD=["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth"];
+function ord(n){return n+(n===1?"st":n===2?"nd":n===3?"rd":"th")}
+function pos(i,len,d){return d==="front"?i+1:len-i}
+function rnd(n){return Math.floor(Math.random()*n)}
+function speak(t){try{if(!window.speechSynthesis)return;speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=.8;speechSynthesis.speak(u)}catch(e){}}
+
+/* build a line of cells. opts: hi(i)->bool, labels(bool), click(i)|null, ok(i) */
+function drawLine(el,items,d,o){
+  el.innerHTML="";
+  var g=document.createElement("div");g.className="line";
+  g.style.gridTemplateColumns="repeat("+items.length+",minmax(0,1fr))";
+  items.forEach(function(e,i){
+    var c=document.createElement(o.click?"button":"div");
+    if(o.click){c.type="button";c.onclick=function(){o.click(i)}}
+    c.className="cell"+(o.ok&&o.ok(i)?" ok":o.hi&&o.hi(i)?" hi":"");
+    c.innerHTML='<span class="e">'+e+'</span><span class="c">'+(o.labels?ord(pos(i,items.length,d)):"")+'</span>';
+    g.appendChild(c);
+  });
+  el.appendChild(g);
+}
+
+/* ---- Point! ---- */
+var P={k:"one",d:"front",n:4};
+function setPressed(box,attr,val){[].forEach.call(box.children,function(b){b.setAttribute("aria-pressed",b.getAttribute(attr)===val?"true":"false")})}
+function renderP(talk){
+  setPressed($("kindSeg"),"data-k",P.k);setPressed($("dirSeg"),"data-d",P.d);
+  [].forEach.call($("nums").children,function(b,i){b.setAttribute("aria-pressed",i+1===P.n?"true":"false")});
+  var txt=P.k==="group"?P.n+(P.n===1?" person":" people")+" from the "+P.d:"The "+ord(P.n)+" person from the "+P.d;
+  $("kindSeg").children[0].textContent=P.n+(P.n===1?" person":" people");
+  $("kindSeg").children[1].textContent="The "+ord(P.n)+" person";
+  drawLine($("pLine"),KIDS,P.d,{labels:true,hi:function(i){var p=pos(i,10,P.d);return P.k==="group"?p<=P.n:p===P.n}});
+  $("pText").textContent=txt;
+  $("pBub").textContent=P.k==="group"?"Count "+P.n+(P.n===1?" person":" people")+" from the "+P.d+"!":"The "+ord(P.n)+" from the "+P.d+" is this one person!";
+  if(talk)speak(txt);
+}
+(function(){
+  for(var i=1;i<=10;i++){(function(n){var b=document.createElement("button");b.type="button";b.textContent=n;b.setAttribute("aria-label",String(n));b.onclick=function(){P.n=n;renderP(true)};$("nums").appendChild(b)})(i)}
+  [].forEach.call($("kindSeg").children,function(b){b.onclick=function(){P.k=b.getAttribute("data-k");renderP(true)}});
+  [].forEach.call($("dirSeg").children,function(b){b.onclick=function(){P.d=b.getAttribute("data-d");renderP(true)}});
+  $("pSay").onclick=function(){speak($("pText").textContent)};
+  renderP(false);
+})();
+
+/* ---- Warm Up ---- */
+var TOTAL=6,round=0,score=0,tries=0,done=false,sel=-1,hint=false,Q={};
+function newQ(){
+  round++;tries=0;done=false;sel=-1;hint=false;
+  var rab=Math.random()<.4,items=rab?RAB:KIDS,len=items.length;
+  var k=Math.random()<.5?"group":"one",d=Math.random()<.5?"front":"back";
+  var n=k==="group"?2+rnd(len-2):1+rnd(len);
+  Q={items:items,k:k,d:d,n:n,noun:rab?"rabbit":"person"};
+  $("qNo").textContent="Question "+round+" of "+TOTAL;$("qPts").textContent="⭐ "+score;
+  $("qText").textContent=k==="group"?"("+round+") "+n+" "+Q.noun+"s from the "+d:"("+round+") The "+ord(n)+" "+Q.noun+" from the "+d;
+  $("qMsg").textContent="Tap the answer, then press Check.";
+  $("chk").hidden=false;$("nxt").hidden=true;
+  renderQ();
+}
+function renderQ(){
+  var len=Q.items.length;
+  drawLine($("qLine"),Q.items,Q.d,{
+    labels:hint||done,
+    click:done?null:function(i){sel=i;renderQ()},
+    hi:function(i){if(sel<0)return false;var ps=pos(sel,len,Q.d),p=pos(i,len,Q.d);return Q.k==="group"?p<=ps:i===sel},
+    ok:function(i){if(!done)return false;var p=pos(i,len,Q.d);return Q.k==="group"?p<=Q.n:p===Q.n}
+  });
+}
+$("chk").onclick=function(){
+  if(done)return;
+  if(sel<0){$("qMsg").textContent="Tap an answer first.";return}
+  var len=Q.items.length;
+  if(pos(sel,len,Q.d)===Q.n){
+    done=true;if(tries===0)score++;
+    $("qPts").textContent="⭐ "+score;
+    $("qMsg").textContent="Great! Count from the "+Q.d+": "+WORD.slice(0,Q.n).join(", ")+".";
+    $("chk").hidden=true;$("nxt").hidden=false;$("nxt").textContent=round>=TOTAL?"Finish":"Next";
+    speak(Q.k==="group"?Q.n+" "+Q.noun+"s":"The "+WORD[Q.n-1]+" "+Q.noun);
+  }else{
+    tries++;hint=true;sel=-1;
+    $("qMsg").textContent="Not quite. Count from the "+Q.d+" and try again.";
+  }
+  renderQ();
+};
+$("nxt").onclick=function(){round>=TOTAL?endQ():newQ()};
+function endQ(){
+  var n=score>=5?3:score>=3?2:1,s="";for(var i=0;i<3;i++)s+=i<n?"⭐":"☆";
+  $("qNo").textContent="Finished!";$("qPts").textContent="";$("qText").textContent="";
+  $("qLine").innerHTML='<div class="end"><div class="st">'+s+'</div><p>You got '+score+' out of '+TOTAL+' on the first try.</p></div>';
+  $("qMsg").textContent="";$("chk").hidden=true;$("nxt").hidden=false;$("nxt").textContent="Play again";
+  $("nxt").onclick=function(){round=0;score=0;$("nxt").onclick=function(){round>=TOTAL?endQ():newQ()};newQ()};
+}
+newQ();
+</script>
+</body>
+</html>
